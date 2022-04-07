@@ -58,6 +58,7 @@ def result(request):
     answer = list()
     num = request.GET.get('num', 1)
     count = 0
+    # 로또번호생성
     while True:
         if count > 6:
             break
@@ -66,6 +67,7 @@ def result(request):
             lotto_num.append(random_number)
             count = count + 1
 
+    # 생성된 로또번호를 입력받은 수만큼 출력해줄 리스트에 넣는다
     for i in range(int(num)):
         answer.append(lotto_num)
 
